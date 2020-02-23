@@ -21,4 +21,29 @@ class People extends Model
 		);
 	}
 
+
+	/**
+	 * Relation to characters
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+	 */
+	public function species()
+	{
+		return $this->belongsToMany('App\Species',
+			'species_people',
+			'people_id',
+			'species_id'
+		);
+	}
+
+
+	/**
+	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
+	 */
+	public function vehicles_pilots() {
+
+		return $this->hasMany('App\VehiclesPilot', 'people_id', 'id');
+
+	}
+
 }
