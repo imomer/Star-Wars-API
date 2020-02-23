@@ -19,3 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // Longest opening crawl films
 Route::get('longest-opening-crawl-film', 'StarWarsController@GetLongestOpeningCrawlFilm');
+
+// Most appeared characters
+Route::get('most-appeared-character', 'StarWarsController@GetMostAppearedCharacter');
