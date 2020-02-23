@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Longest opening crawl films
+Route::get('longest-opening-crawl-film', 'StarWarsController@GetLongestOpeningCrawlFilm');
