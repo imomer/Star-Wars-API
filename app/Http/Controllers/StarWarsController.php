@@ -7,8 +7,7 @@ use App\People;
 use App\Planet;
 use Illuminate\Http\Request;
 
-class StarWarsController extends Controller
-{
+class StarWarsController extends Controller {
 
 	/**
 	 * Get longest opening crawl films
@@ -53,13 +52,13 @@ class StarWarsController extends Controller
 		// Get planets with largest number of pilots along with their species
 		$planets = Planet::with( [
 			'people' => function ( $q ) {
-				return $q->has( 'vehicles_pilots' )->with('species');
+				return $q->has( 'vehicles_pilots' )->with( 'species' );
 			}
 		] )->withCount( [
 			'people' => function ( $q ) {
 				return $q->has( 'vehicles_pilots' );
 			}
-		] )->orderByDesc('people_count')->get()->reject( function ( $planet ) {
+		] )->orderByDesc( 'people_count' )->get()->reject( function ( $planet ) {
 			return $planet->people_count === 0;
 		} )->values();
 
@@ -126,7 +125,7 @@ class StarWarsController extends Controller
 		$species_counts = array_count_values( $films_species );
 
 		// Sort species in descending order
-		arsort($species_counts);
+		arsort( $species_counts );
 
 		return $species_counts;
 
