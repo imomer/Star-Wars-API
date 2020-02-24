@@ -24,7 +24,7 @@ Route::get('longest-opening-crawl-film', 'StarWarsController@GetLongestOpeningCr
 Route::get('most-appeared-character', 'StarWarsController@GetMostAppearedCharacter');
 
 // Get planets with pilots
-Route::get('get-planets-with-pilots', 'StarWarsController@GetPlanetsWithPilots');
+Route::get('planets-with-pilots', 'StarWarsController@GetPlanetsWithPilots');
 
 // Most appeared species
 Route::get('most-appeared-species', 'StarWarsController@GetMostAppearedSpecies');
