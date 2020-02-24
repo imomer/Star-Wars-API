@@ -25,3 +25,6 @@ Route::get('most-appeared-character', 'StarWarsController@GetMostAppearedCharact
 
 // Get planets with pilots
 Route::get('planets-with-pilots', 'StarWarsController@GetPlanetsWithPilots');
+
+// Most appeared species
+Route::get('most-appeared-species', 'StarWarsController@GetMostAppearedSpecies');
