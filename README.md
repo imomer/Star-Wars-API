@@ -27,6 +27,12 @@ $ composer install
 #### 2. Setup .env
 Make a copy of `.env.example` file on the root directory and rename it to `.env`
 
+#### 3. Application Key 
+Run the following command to generate application key
+```sh
+$ php artisan key:generate
+```
+
 ## Usage
 
 ### ❯ Run the API
